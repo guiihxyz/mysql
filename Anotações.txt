@@ -7,3 +7,16 @@ linguagem de exploração
 programas adicionais
 
 Structured Query Language - SQL
+
+mysql possui:
+ddl - definição
+dml - manipulação
+dql - solicitações
+dcl - controle
+dtl - transações
+
+caracteristicas de uma boa transação:
+Durabilidade
+Isolamento
+Consistência
+Atomicidade
