@@ -1,0 +1,9 @@
+FOCO!!!!
+
+banco de dados são compostos por:
+base de dados
+sistema gerenciador (dns)
+linguagem de exploração
+programas adicionais
+
+Structured Query Language - SQL
