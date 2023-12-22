@@ -20,3 +20,44 @@ Durabilidade
 Isolamento
 Consistência
 Atomicidade
+
+hierarquia:
+banco de dados -> registros
+
+tipos primitivos:
+números - inteiro, real, lógico
+data e tempo - date, datetime,
+literal - caractere, texto, binário, coleção
+espacial
+
+create database cadastro - cria um banco de dado
+
+create database cadastro
+default character set utf8
+default collate utf8_general_ci; - cria um banco de dados com utf-8
+
+create table nome ( - cria uma tabela
+	`id` int not null auto_increment
+	`nome` varchar(30) not null,
+	`nascimento` date,
+	`sexo` enum('M', 'F'),
+	`peso` decimal(5,2),
+	`altura` decimal(3,2),
+	`nacionalidade` varchar(20) default 'Brasil',
+	primary key(id)
+) default charset = utf8;
+
+INSERT INTO pessoas VALUES
+(DEFAULT, 'Cláudio', '1975-4-22', 'M', '99.0', '2.15', 'Brasil'),
+(DEFAULT, 'Pedro', '99-12-3', 'M', '87', '2', default),
+(DEFAULT, 'Janaína', '1987-11-12', 'F', '75.4', '1.66', 'Eua');
+
+use nome; - usa uma tabela
+
+describe nome; - descreve uma tabela
+
+drop database nome; - exclui uma database
+
+
+not null - dado obrigatório
+auto_increment - será incrementado automaticamente
