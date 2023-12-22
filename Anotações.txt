@@ -47,10 +47,30 @@ create table nome ( - cria uma tabela
 	primary key(id)
 ) default charset = utf8;
 
+CREATE TABLE IF NOT EXISTS gafanhotos () default charset = utf8; - cria apenas se não existe;
+
 INSERT INTO pessoas VALUES
 (DEFAULT, 'Cláudio', '1975-4-22', 'M', '99.0', '2.15', 'Brasil'),
 (DEFAULT, 'Pedro', '99-12-3', 'M', '87', '2', default),
 (DEFAULT, 'Janaína', '1987-11-12', 'F', '75.4', '1.66', 'Eua');
+
+ALTER TABLE pessoas
+change column profissao prof varchar(20); - modifica o nome
+
+ALTER TABLE nome
+modify profissao varchar(20) not null default ''; - modifica table
+
+ALTER TABLE pessoas
+RENAME TO gafanhotos; - modifica o nome da tabela
+
+SELECT * FROM nome; - seleciona tudo
+
+DROP COLUMN nome - exclui uma coluna
+
+drop table if exists teste; - exclui a tabela caso exista
+
+add profissao varchar(10) (OPCIONAL) -> after nome;
+add codigo int (OPCIONAL) -> first;
 
 use nome; - usa uma tabela
 
@@ -61,3 +81,4 @@ drop database nome; - exclui uma database
 
 not null - dado obrigatório
 auto_increment - será incrementado automaticamente
+unique - nome único
