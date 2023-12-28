@@ -60,6 +60,15 @@ change column profissao prof varchar(20); - modifica o nome
 ALTER TABLE nome
 modify profissao varchar(20) not null default ''; - modifica table
 
+update cursos
+set nome = "HTML5"
+where idcurso = "1"; - modifica uma linha
+
+DELETE FROM cursos
+WHERE idcurso = "1"; - deleta uma linha
+
+TRUNCATE cursos; - deleta todas as linhas
+
 ALTER TABLE pessoas
 RENAME TO gafanhotos; - modifica o nome da tabela
 
@@ -78,6 +87,19 @@ describe nome; - descreve uma tabela
 
 drop database nome; - exclui uma database
 
+distinct - unifica todas as opções, não as repetindo
+
+count() - conta quantos tem
+
+max() - o maior número
+
+min() - o menor número
+
+sum() - soma os números
+
+avg() - média dos números
+
+having - se tem algo
 
 not null - dado obrigatório
 auto_increment - será incrementado automaticamente
